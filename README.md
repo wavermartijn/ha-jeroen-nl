@@ -34,6 +34,7 @@ Een eigen maximum per dag (standaard 6 voor stroomprijzen) laat ruimte voor ande
 | Gemiddelde prijs vandaag | gemiddelde totaalprijs van de dag | |
 | Goedkoopste moment vandaag | tijdstempel van het goedkoopste kwartier, direct bruikbaar als tijd-trigger | `end`, `price` |
 | Laagste / hoogste / gemiddelde prijs morgen, goedkoopste moment morgen | hetzelfde voor morgen; leeg tot de prijzen van morgen bekend zijn (~13:15) | |
+| Laagste / hoogste prijs over 2–5 dagen | voorspelde totaalprijs van het goedkoopste / duurste kwartier van die dag | `start`, `end`, `market`, `low`, `high` |
 | Gasprijs | totaalprijs van de lopende gasdag (EUR/m³); een gasdag loopt van 06:00 tot 06:00 | `market_price`, `gas_day`, `start`, `end`, `next_price` |
 | Opwekvoorspelling vandaag / morgen | kWh | `p10`, `p90`; bij vandaag ook `days` en `hours` |
 
