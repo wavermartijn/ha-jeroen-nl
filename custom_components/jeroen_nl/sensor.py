@@ -47,6 +47,7 @@ from .core import (
     Tariff,
     current_point,
     day_stats,
+    forecast_stats,
     gas_day,
     next_point,
 )
@@ -84,7 +85,7 @@ def _stats(c: JeroenCoordinator, offset: int) -> DayStats | None:
 def _forecast_stats(c: JeroenCoordinator, offset: int) -> DayStats | None:
     """Lowest/highest predicted quarter of a day covered only by the forecast."""
     day = dt_util.now().astimezone(NL_TZ).date() + timedelta(days=offset)
-    return day_stats([p for p in c.cache.forecast if p.local_date == day])
+    return forecast_stats(c.cache, day)
 
 
 def _all_in(c: JeroenCoordinator, p: PricePoint | None) -> float | None:
